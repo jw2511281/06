@@ -1,18 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-int square(int a)
+int factorial(int n)
 {
-    a=a*a;
+    int res=1;
+    int i;
+    for(i=1;i<=n;i++)
+       res*=i;
+    return res;
+}
+
+int combination(int n, int r)
+{
+    return(factorial(n)/(factorial(n-r)*factorial(r)));
 }
 
 
 int main(int argc, char *argv[]) {
+    int n, r;
+    int res;
     
-    int a=2;
-    a=square(a);
-    printf("a=%i\n",a);
+    printf("Enter n, r: ");
+    scanf("%i, %i",&n, &r);
+    
+    res=combination(n, r);
+    
+    printf("Combination result is %i", res);
     
     system("PAUSE");
     return 0;
