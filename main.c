@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
     
     printf("sum two result is %i\n", sumTwo(2,3));
     printf("square result is %i\n", square(5));
-    printf("get max result is %i\n", get_max(10,9));
+    printf("get max result is %i\n", get_max(10,13));
     
     system("PAUSE");
     return 0;
